@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+.tools/
+.python/
+.uv-cache/
 *.egg-info/
 build/
 dist/
@@ -21,6 +24,8 @@ extracted/**
 logs/**
 !logs/.gitkeep
 *.part
+certs/**
+!certs/.gitkeep
 
 # Test and editor output
 .pytest_cache/

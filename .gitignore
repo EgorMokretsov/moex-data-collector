@@ -1,0 +1,33 @@
+# Python / virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Downloaded data, extracted files and logs
+downloads/**
+!downloads/**/
+!downloads/**/.gitkeep
+extracted/**
+!extracted/.gitkeep
+logs/**
+!logs/.gitkeep
+*.part
+
+# Test and editor output
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini

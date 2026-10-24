@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moex-data-collector"
+version = "0.1.0"
+description = "Local collector of MOEX OrderLog archives for PostgreSQL"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "SQLAlchemy>=2.0,<3",
+    "psycopg[binary]>=3.1,<4",
+    "requests>=2.32,<3",
+    "beautifulsoup4>=4.12,<5",
+    "py7zr>=0.22,<2",
+    "python-dotenv>=1.0,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+moex-collector = "app.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
